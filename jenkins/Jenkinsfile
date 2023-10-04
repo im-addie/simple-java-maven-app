@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
 
-        // no need to clone; GitHub automatically does it for us
+        // no need to clone; Jenkins automatically does it for us
 
         stage('Build') {
             steps {
