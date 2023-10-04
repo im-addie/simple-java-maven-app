@@ -1,11 +1,9 @@
 pipeline {
-    agent {
-        docker {
-            image 'maven:3.9.0'
-            args '-v /root/.m2:/root/.m2'
-        }
-    }
+    agent any
     stages {
+
+        // no need to clone; GitHub automatically does it for us
+
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
